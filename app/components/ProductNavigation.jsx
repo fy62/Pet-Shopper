@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export const ProductNavigation = (props) => { 
+export const ProductNavigation = (props) => {
   const styles = {
       root: {
         display: 'flex',
@@ -27,14 +27,14 @@ export const ProductNavigation = (props) => {
       },
       gridList: {
         display: 'flex',
-        width: '100%',
+        width: (window.innerHeight > window.innerWidth) ? '30%' : '100%',
         justifyContent: 'center',
         cellHeight: 'auto',
         margin: 'auto'
       },
       gridTile: {
           width: 'auto',
-          height: '250px',
+          height: '100%',
           margin: '5%'
       },
       titleStyle: {
@@ -42,7 +42,8 @@ export const ProductNavigation = (props) => {
         fontSize: '1.2em'
       },
       tileImage: {
-        maxHeight: '200px',
+        height: '70%',
+        width: 'auto',
         maxWidth: '100%',
         display:'block',
         margin:'auto'
@@ -56,7 +57,7 @@ export const ProductNavigation = (props) => {
 
   return (
     <div style={styles.root}>
-      <GridList id='categoryNav' style={styles.gridList} cols={4}>
+      <GridList id='categoryNav' style={styles.gridList} cols={(window.innerHeight > window.innerWidth) ? 1 : 3}>
         {tilesData.map((tile) => (
           <Paper zDepth={4} key={tile.id} rounded={false} style={styles.gridTile}>
           <GridTile

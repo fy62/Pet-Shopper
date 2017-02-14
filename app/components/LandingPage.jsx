@@ -8,7 +8,7 @@ export default () => {
 		<div>
 		 <NavBar/>
   		<div id="container">
-  			<img src="/images/BannerImage.jpg" style={{'display': 'block', 'margin': 'auto', 'height': '50vh', 'width':'auto'}}/>
+  			<img src="/images/BannerImage.jpg" style={{'display': 'block', 'margin': 'auto', 'height': 'auto', 'maxWidth':'60%', 'width': 'auto', 'maxHeight':'30%'}}/>
 			<ProductNavigation />
   		</div>
 		</div>

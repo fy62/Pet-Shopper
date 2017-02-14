@@ -6,9 +6,9 @@ const seedUsers = () => db.Promise.map([
 ], user => db.model('users').create(user))
 
 const seedCategories = () => db.Promise.map([
-	{name: 'Clothing', imageURL: '/images/clothing/beecostume.jpg'},
-	{name: 'Food', imageURL: '/images/food/stellaandchewys.jpg'},
-	{name: 'Accessories', imageURL: '/images/accessories/santabeard.jpg'}
+	{name: 'Clothing', imageURL: '/images/clothing/dress.jpg'},
+	{name: 'Food', imageURL: '/images/food/halo.png'},
+	{name: 'Accessories', imageURL: '/images/accessories/doubleleash.jpg'}
 ], category => db.model('categories').create(category));
 
 const seedProducts = () => db.Promise.map([
